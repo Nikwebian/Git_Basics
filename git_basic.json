@@ -1,0 +1,135 @@
+
+You already set your global config for user.name and user.email.
+To check if they are really applied, you can run:
+
+🔹 Check only one config value
+git config --global user.name
+git config --global user.email
+
+
+👉 This will print exactly what you set (Nikhil Patil and your email).
+
+🔹 Check all global configs
+git config --global --list
+
+
+👉 Shows everything set globally (user.name, user.email, any aliases, etc.).
+
+🔹 Check local repo config
+
+If you want to see configs only for this project, run:
+
+git config --list
+
+
+or
+
+git config --local --list
+
+
+👉 This shows settings inside .git/config of your current repo.
+
+🔹 Check system + global + local (all combined)
+git config --list --show-origin
+
+
+👉 This will show where each setting comes from (system, global, or local file).
+
+⚡ So in your case, if you run:
+
+git config --global --list
+
+
+you should see:
+
+user.name=Nikhil Patil
+user.email=np00668832@gmail.com
+
+
+
+
+
+// git restore --staged <file> 
+
+
+// git restore <file> 
+This throws away your local modifications and restores the file content from the last committed state (HEAD).
+Unstage a file (but keep changes in working directory):
+
+git restore --staged <file>
+
+
+👉 If you ran git add file.txt by mistake, this will remove it from staging, but keep your changes in the file.
+
+Restore file from another commit/branch:
+
+git restore --source=<commit_hash> <file>
+
+👉 This will replace your file content with how it was in that commit.
+
+
+//  Created the Branch  
+git branch employee  // create a branch named employee 
+git checkout employee // will switch to this branch employee from main . 
+
+
+Meaning of the Codes
+A = Added (untracked file added)
+→ The file git_basic.json exists in your working directory but was not in the index/commit history of the branch you checked out.
+Git is telling you: "I had to add this untracked file into the working tree."
+M = Modified
+→ The file learn.js is present in both branches, but its content was modified in your working directory compared to the commit you checked out.
+Git is letting you know it merged in the modification instead of discarding it.
+
+
+
+
+
+// HOW TO CREATE AND PUSH THE BRANCH. 
+Here’s the proper workflow after you create a branch:
+
+1️⃣ Create and switch to a branch
+git checkout -b employee
+
+
+or
+
+git branch employee
+git checkout employee
+
+2️⃣ Make changes
+
+Add new files or modify existing files in your working directory.
+
+3️⃣ Stage your changes
+git add .
+
+
+or for specific files:
+
+git add learn.js git_basic.json
+
+
+This moves the changes to the staging area.
+
+4️⃣ Commit the changes
+git commit -m "Added employee branch changes"
+
+
+This records the changes in your local branch history.
+
+5️⃣ Push the branch to GitHub
+git push origin employee
+
+
+Now the employee branch will appear on GitHub.
+
+Until you push, the branch exists only locally.
+
+⚡ Important:
+If you create a branch but don’t add, commit, and push, GitHub will not show it. Only your local Git will know about it.
+
+
+4️⃣ Push the branch to GitHub
+git push origin employee
+Now the employee branch and your changes will appear on GitHub.
