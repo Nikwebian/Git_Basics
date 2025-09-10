@@ -17,3 +17,15 @@ for(let i =0 ;i<arr.length;i++)
         arr[i] = largest ; 
 }
 console.log(largest); 
+
+// Swap Functionality. 
+
+
+let a =5 ; 
+let b =10 ; 
+
+a=a+b ;
+b=a-b; 
+a=a-b ; 
+console.log("Here is the Swapping Logic and the swapped value");
+console.log(a,b); 
