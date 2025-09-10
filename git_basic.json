@@ -131,5 +131,65 @@ If you create a branch but don’t add, commit, and push, GitHub will not show i
 
 
 4️⃣ Push the branch to GitHub
-git push origin employee
+git push origin employee    
 Now the employee branch and your changes will appear on GitHub.
+
+
+
+
+
+**************************VERY IMPORTANT THING IS THAT ************************************************
+
+NOW I HAVE CREATED THE EMPLOYEE BRANCH AND BEFORE THAT I HAVE PUSHED THE BASIC CODE IN THE  MAIN BRANCH 
+SO THE MAIN BRANCH IS CONTAINING 
+
+1. SINGLE FUNCTION TO CHECK THE STRING FREQUENCY BUT NOT THE FUNCTION OF LARGEST NUMBER FOUND OK. 
+
+
+2. NOW I HAVE  WORKED ON THE BRANCH  EMPLOYEE AND HAD WORKED ON THAT BRANCH AND CREATED A FUNCTION IN THE FILE 
+LEARN.JS  [ TO FIND OUT THE LARGEST NUMBER]
+
+AFTER ADD. AND COMMIT I HAVE PUSHED THAT BRANCH  SO THE CHANGES ARE NOT SHOWING INSIDE THE MAIN BUT ONLY THE EMPLOYEE BRANCH 
+
+3. NOW WE HAVE TO  PULL REQUEST AND DO HAVE TO MERGE THE CODE BY PR PULL REQUEST . 
+PR= A REQUEST TO MERGE YOUR CHANGES FROM A BRANCH TO THE MAIN BRANCH OR DEVELOP BRANCH OR ANY OF THE BRANCH . 
+
+SO WE HAVE TO  
+
+
+
+*************IF COMMITED AND WANT TO UNCOMMIT THE CHANGES ******************************
+If you’ve already committed and want to “undo” that commit, there are a few options depending on what you want to do with the changes:
+
+1️⃣ Undo the last commit but keep the changes staged
+git reset --soft HEAD~1
+HEAD~1 means the last commit.
+Your changes remain staged (ready to commit again).
+2️⃣ Undo the last commit and unstage the changes
+git reset --mixed HEAD~1
+Your changes remain in the working directory, but not staged.
+You can modify them or stage them again.
+3️⃣ Undo the last commit and discard changes
+git reset --hard HEAD~1
+Be careful: this deletes your last commit and changes permanently.
+Nothing remains in your working directory.
+🔹 Extra Notes
+If the commit has already been pushed to remote, use git revert instead:
+git revert <commit-hash>
+This creates a new commit that undoes the previous commit without rewriting history.
+
+
+
+
+
+
+
+🔹 Case 1: You are on main but want to push to remote employee
+
+Suppose:
+
+Local branch = main
+Remote branch = employee
+You can directly specify the source (your local branch) and the destination (remote branch):
+git push origin main:employee
+
