@@ -1,0 +1,69 @@
+-------------------------GIT  CHEET SHEET EXPLAINED EACH AND EVERY THING ABOUT THE GIT ------------------------------------------
+Commands are Listed Below as per they are working. 
+
+1. GIT CONFIG COMMAND [To set my name and email globally hence whenever we make a commit Git will attach Author Name and Email Stored in Local Machine global config file]
+***git config --global {it will affect all repos on your machine}***
+***git config --local {it will affect  only Particular Repo}***
+a.  git  config --global user.name "Nikhil" 
+b.  git  config --global user.email "np00668832@gmail.com"
+c.  git  config --global alias.i init  [Hence it creates a Shortcut alias for the git commands]
+d.  git  config --global alias.co checkout [now we can use checkout as co] 
+e.  git  config --global alias.br branch [now we can use branch as br]
+f.  git  config --global alias.st status [ now we can use status as st]
+ABOVE WE HAVAE CREATED THE SHORTCUTS OF THE GITHUB COMMANDS. 
+
+Git status is a command that gives you a summary of the current state of your working directory and staging area
+
+2.GIT STATUS [IT WILL SHOW ME WHAT NEW FILES ARE ADDED | DELETED  | MODIFIED  | ON WHICH BRANCH WE ARE WORKING CURRENTLY]
+i.    On which branch we are. :: Tells you which branch you are currently working on.
+ii.   Modified/ Unstaged: Changes not staged for commit: Files you have modified but not told Git to save in the next commit. 
+      What to do: Use git add <file> to stage them.
+iii.  Which files are Untracked :  New files Created that Git is not tracking yet. ex. basic.js so it is newly created it is untracked. 
+      What to do: Use git add <file> to start tracking them.
+iv.   Which files are Staged (Ready for Commit): Files that are staged (ready to be saved in the next commit).
+      Use git commit to save them permanently.
+                        HINDI 
+
+I.  Branch: konsi branch me tum kaam kar rahe ho. 
+II. Unstagged File: koi file jo already exist karti ho usme kuch modification hue ho changes hue ho vo Unstaged Files hoti he . 
+Unstaged Files ko save karne ke liye apne ko git add fileName karna padega. 
+III. Untracked: New Files tumne Create karli jinko abhi tak add he nahi kari he Git me . to git add file_Name. 
+Iv. Staged:  Jo Files Ready he means jo files ko [git add .] kar dia he vo sari files ko apan ab commit kar sakte he. 
+ Stagging Area : JO FILES COMMIT HONE KE LLIYE READY HE . 
+***************VERY NICE EXAMPLE OF BOX AND TRUCK *****************************
+Working Directory: Your desk, where you make a mess (create and edit files).
+
+Staging Area: A box where you put items you want to ship.
+
+Repository: The shipping truck that takes the box away.
+
+git add is the action of picking up an item from your desk and placing it into the box. You can't ship the box (git commit) until you put items in it (git add).
+
+3. git add  .  | git add file_name [It is like Putting the item into the box] | SAVING THE CHANGES AND ALL NEW FILES ADDED ARE SAVED IN GIT 
+
+git add is used for both:
+Takes all unstaged and untracked files in the current folder and puts them in the staging area.
+
+after git add . or even after adding particular file also and after that if any changed made then it will go inside the Untracked File.
+
+Once we are satisfied Fully that eveything is ok in our code then we can do Commit [it will store a version or a changes made in your git history]
+
+4. git commit -m "any message that changes done in this file and so on" 
+git commit -m "Add user login functionality with Google OAuth"
+git commit -m "Fix the calculation bug in the shopping cart"
+git commit -m "Update the README file with installation instructions"
+
+
+5. If by mistake we have added the file and want to take back then use this command 
+**********git rm --cached .env**********
+
+
+
+
+
+
+
+
+
+
+
