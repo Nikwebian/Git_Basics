@@ -106,6 +106,14 @@ c.git push -f origin main: Force push (Use with extreme caution! This overwrites
 
 
 
+BY MISTAKE I HAVE PUTTED TEH .ENV AND NODEMODULES ON GIT AND ALSO PUSHED THAT . 
+SO TO REMOVE THAT FROM GIT 
+just 
+a. git checkout google 
+b. git pull origin google 
+c. git rm --cached :Use git rm --cached to remove the files from Git's tracking without deleting them from your local project folder.
+git rm -r --cached node_modules
+git rm --cached .env
 
 
 
