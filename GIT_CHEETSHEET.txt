@@ -58,6 +58,55 @@ git commit -m "Update the README file with installation instructions"
 **********git rm --cached .env**********
 
 
+*************AFTER 1ST COMMIT ONLY WE CAN SEE THE BRANCH IF NEWLY CREATED THE PROJECT AND THEN WE ARE LOOKING FOR THE BRANCH THEN IT WILL NOT BE VISIBLE 
+A branch in Git does not exist until you make the first commit.
+
+6. TO CREATE A BRANCH [WHILE WORKING WITH A TEAM WE REQUIRED THIS ***it is like creating a copy of your Original code***] 
+a. git branch :To check on which branch you are use Command 
+b. git checkout  <branch_name> :If you want  to enter into the particular branch and want to work on it then use  now You come under that branch and can do work on it. 
+c. git checkout -b <give_name_of_branch> : It create a new branch with <name given to branch> and will move inside that and we will be currently working on that. 
+ABOVE IS A SINGLE STEP METHOD TO CREATE A NEW BRANCH AND MOVE DIRECTLY TO THAT BRANCH . 
+***HERE IS THE 2 STEP METHOD TO CREATE A BRANCH AND THEN MANUALLY GO INTO THAT BRANCH***************** 
+d. git branch <give_name_of_branch> : Here the New branch has been created . but we not entered in that branch . 
+e. git checkout <the_branch_above_you_created> : Here we have entered in this branch  manually by using checkout [Hence the Head Pointer moves to that branch you have created]
+ 
+7. SWITCH : 
+SO THE SWITCH AND CHECKOUT ARE SIMILAR THERE IS A BASIC DIFFERENCE IN BOTH:
+git switch - For switching branches.
+git restore - For restoring files (undoing changes).
+
+Task	                                     Old Way (Still works)              New & Recommended Way	                              What it does
+Switch to an existing branch	            git checkout main	                  git switch main	                  Moves your HEAD pointer. Changes the branch you are currently on.
+Create a new branch and switch to it	git checkout -b <new-feature>	      git switch -c <new-feature>	      Creates a new branch and moves your HEAD pointer to it. (-c flag means "create")
+Discard changes in a file	            git checkout -- file.txt	      git restore file.txt	            Reverts a file back to how it looked in the last commit. Throws away your current changes.
+Unstage a file	                        git checkout HEAD -- file.txt	      git restore --staged file.txt	      Removes a file from the staging area (unstages it).
+
+8. PUSH : git push <remote> <branchname> : Now in git hub we can see it is available. 
+git push: The command to send your local commits to a remote server.
+Hence this uploads your branch to Github 
+Now Github Usually Suggest a Pull Request Automatically when it detecs a new branch pushed or click Pull Request . 
+a. git push origin main
+b. git push -u origin main  The -u Flag (Set Upstream) :The first time you push a new branch, you should use the -u or --set-upstream flag
+What it does: This does two things:
+Pushes your code to the main branch on the origin remote.
+Links your local main branch to track the remote main branch.
+Why it's useful: After using -u once, you can simply use git push or git pull in the future without specifying origin main. Git will know where to push to/pull from
+c.git push -f origin main: Force push (Use with extreme caution! This overwrites history on the remote):
+
+
+9. TO PULL THE CODE AGAIN FOR CHANGES THEN WE CAN USE THE git pull  origin <branch_name> 
+10. git show It will show all the History and Overview 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
